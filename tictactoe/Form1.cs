@@ -53,29 +53,69 @@ namespace tictactoe
         private void WinnerCheck()
         {
             bool winner = false;
-          
 
-            //horizontal checks
+
+            //horizontal checks and change the winning line to green
             if ((A1.Text == A2.Text) && (A2.Text == A3.Text) && (!A1.Enabled))
+            {
                 winner = true;
+                A1.BackColor = Color.Green;
+                A2.BackColor = Color.Green;
+                A3.BackColor = Color.Green;
+            }
             if ((B1.Text == B2.Text) && (B2.Text == B3.Text) && (!B1.Enabled))
+            {
                 winner = true;
+                B1.BackColor = Color.Green;
+                B2.BackColor = Color.Green;
+                B3.BackColor = Color.Green;
+            }
             if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled))
+            {
                 winner = true;
+                C1.BackColor = Color.Green;
+                C2.BackColor = Color.Green;
+                C3.BackColor = Color.Green;
+            }
 
-            //vertical checks
+            //vertical checks and change the winning line to green
             if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
+            {
                 winner = true;
+                A1.BackColor = Color.Green;
+                B1.BackColor = Color.Green;
+                C1.BackColor = Color.Green;
+            }
             if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!A2.Enabled))
+            {
                 winner = true;
+                A2.BackColor = Color.Green;
+                B2.BackColor = Color.Green;
+                C2.BackColor = Color.Green;
+            }
             if ((A3.Text == B3.Text) && (B3.Text == C3.Text) && (!A3.Enabled))
+            {
                 winner = true;
+                A3.BackColor = Color.Green;
+                B3.BackColor = Color.Green;
+                C3.BackColor = Color.Green;
+            }
 
-            //diagonal checks
+            //diagonal checks and change the winning line to green
             if ((A1.Text == B2.Text) && (B2.Text == C3.Text) && (!A1.Enabled))
+            {
                 winner = true;
+                A1.BackColor = Color.Green;
+                B2.BackColor = Color.Green;
+                C3.BackColor = Color.Green;
+            }
             if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!A3.Enabled))
+            {
                 winner = true;
+                A3.BackColor = Color.Green;
+                B2.BackColor = Color.Green;
+                C1.BackColor = Color.Green;
+            }
 
 
 
@@ -85,6 +125,7 @@ namespace tictactoe
                 string win = "";
                 if (turn)
                     win = "O";
+                    
                 else
                     win = "X";
                 MessageBox.Show("Player " + win + " Wins!", "Winner"); //popup text for the winner
